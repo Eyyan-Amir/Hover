@@ -1,0 +1,40 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: "josefin",cursive;}
+body{
+    background-color: #000;
+    /* background-image: linear-gradient(to right,blue,red); */
+}
+.parentDiv{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.childDiv{
+    color: darkblue;
+    position: relative;
+    text-decoration: none;
+    padding: 2rem 4rem;
+    border: 3px solid white;
+    font-size: 2rem;
+    /* transition: all 1s; */
+    transition: 1s ease-in; /* start slow end Quick */
+    overflow: hidden;
+}
+.childDiv::before{
+    content: "Hover Effect";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: darkred;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    transform: translateY(-6.8rem);
+    display: grid;
+    place-items: center;
+    transition:all 1s;
+}
+.childDiv:hover::before{
+    transform: translateY(0);
+}
